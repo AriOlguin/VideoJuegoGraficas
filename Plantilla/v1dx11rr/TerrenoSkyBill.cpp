@@ -11,8 +11,8 @@
 #pragma comment (lib, "d3dx11.lib")
 #pragma comment (lib, "d3dx10.lib")
 
-#define SCREEN_X 1920
-#define SCREEN_Y 1080
+#define SCREEN_X 1280
+#define SCREEN_Y 720
 
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
@@ -77,7 +77,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     dmScreenSettings.dmFields = DM_BITSPERPEL | DM_PELSWIDTH | DM_PELSHEIGHT;
 
     // Change the display settings to full screen.
-    ChangeDisplaySettings(&dmScreenSettings, CDS_FULLSCREEN);
+    //ChangeDisplaySettings(&dmScreenSettings, CDS_FULLSCREEN);
 
     // Set the position of the window to the top left corner.
     posX = posY = 0;

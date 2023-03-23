@@ -2,15 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\medra\Desktop\TerrenoSkyBillModGC2\x64\Debug\TerrenoSkyBill.exe</FullPath>
+      <FullPath>D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\x64\Debug\TerrenoSkyBill.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\medra\Desktop\TerrenoSkyBillModGC2\x64\Debug\Billboard.cso</FullPath>
+      <FullPath>D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\x64\Debug\Billboard.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\medra\Desktop\TerrenoSkyBillModGC2\x64\Debug\Modelo.cso</FullPath>
+      <FullPath>D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\x64\Debug\Modelo.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
