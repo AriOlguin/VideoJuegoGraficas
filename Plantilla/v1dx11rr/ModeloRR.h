@@ -351,7 +351,7 @@ public:
 
 	}
 
-	void Draw(D3DXMATRIX vista, D3DXMATRIX proyeccion, float ypos, D3DXVECTOR3 posCam, float specForce, float rot, char angle, float scale)
+	void Draw(Camara* camara, float ypos, float specForce, float rot, char angle, float scale)
 	{
 		static float rotation = 0.0f;
 		rotation += 0.01;
@@ -360,9 +360,9 @@ public:
 		unsigned int stride = sizeof(VertexObj);
 		unsigned int offset = 0;
 
-		camPos.x = posCam.x;
-		camPos.y = posCam.y;
-		camPos.z = posCam.z;
+		camPos.x = camara->posCam.x;
+		camPos.y = camara->posCam.y;
+		camPos.z = camara->posCam.z;
 
 		//define la estructura del vertice a traves de layout
 		d3dContext->IASetInputLayout(inputLayout);
@@ -386,7 +386,15 @@ public:
 		D3DXMATRIX rotationMat;
 		D3DXMatrixRotationYawPitchRoll(&rotationMat, 0.0f, 0.0f, 0.0f);
 		D3DXMATRIX translationMat;
+
+
+		//movimiento
+		
+		//posX = posX + 0.001;
+
 		D3DXMatrixTranslation(&translationMat, posX, ypos, posZ);
+
+
 		if(angle == 'X')
 			D3DXMatrixRotationX(&rotationMat, rot);
 		else if (angle == 'Y')
@@ -402,8 +410,8 @@ public:
 		D3DXMatrixTranspose(&worldMat, &worldMat);
 		//actualiza los buffers del shader
 		d3dContext->UpdateSubresource(worldCB, 0, 0, &worldMat, 0, 0);
-		d3dContext->UpdateSubresource(viewCB, 0, 0, &vista, 0, 0);
-		d3dContext->UpdateSubresource(projCB, 0, 0, &proyeccion, 0, 0);
+		d3dContext->UpdateSubresource(viewCB, 0, 0, &camara->vista, 0, 0);
+		d3dContext->UpdateSubresource(projCB, 0, 0, &camara->proyeccion, 0, 0);
 		d3dContext->UpdateSubresource(cameraPosCB, 0, 0, &camPos, 0, 0);
 		d3dContext->UpdateSubresource(specForceCB, 0, 0, &specForce, 0, 0);
 		//le pasa al shader los buffers

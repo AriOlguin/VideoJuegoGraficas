@@ -11,6 +11,8 @@
 #include "ModeloRR.h"
 #include "XACT3Util.h"
 
+
+
 class DXRR{	
 
 private:
@@ -42,8 +44,20 @@ public:
 	SkyDome *skydome;
 	BillboardRR *billboard;
 	Camara *camara;
-	ModeloRR* model,*cabaña;
-	
+	ModeloRR* model;
+	//PUEBLO 01
+	ModeloRR* iglesia, * pozo, * columpios;
+	//PUEBLO 02
+	ModeloRR* casa, * casa01, * casa02, * molino;
+	//GRANJA
+	ModeloRR* cabaña, * cabaña2, * granero , * corral;
+	//MOBS
+	ModeloRR *toro, * caballo, * dog;
+	//ITEMS
+	ModeloRR * bidon, * bolsa, * generador ;
+
+	ModeloRR* casa03, * casa04, * casa05, * casa06,*casa07,*casa08;
+
 	float izqder;
 	float arriaba;
 	float vel;
@@ -73,11 +87,51 @@ public:
 		arriaba = 0;
 		billCargaFuego();
 		camara = new Camara(D3DXVECTOR3(0,80,6), D3DXVECTOR3(0,80,0), D3DXVECTOR3(0,1,0), Ancho, Alto);
-		terreno = new TerrenoRR(300, 300, d3dDevice, d3dContext);
+		terreno = new TerrenoRR(1024, 1024, d3dDevice, d3dContext);
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"SkyDome.png");
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
-		cabaña = new ModeloRR(d3dDevice, d3dContext, "modelos/cabana/cottage_fbx.obj", L"modelos/cabana/cottage_diffuse.png", L"modelos/cabana/cottage_specular.png", 40,0);
+		
+		//casa = new ModeloRR(d3dDevice, d3dContext, "modelos/cabana/cottage_fbx.obj", L"modelos/cabana/cottage_diffuse.png", L"modelos/cabana/cottage_specular.png", 40, 0); 
+		
+		
+		//Items
+		bidon = new ModeloRR(d3dDevice, d3dContext, "modelos/Bidon/Bidon.obj", L"modelos/Bidon/low_default_BaseColor.png", L"modelos/Bidon/low_default_Roughness.png", 0, 0);
+		bolsa = new ModeloRR(d3dDevice, d3dContext, "modelos/Bolsa/Bolsa.obj", L"modelos/Bolsa/PlasticBag_Albedo.jpg", L"modelos/Bolsa/PlasticBag_roughness.jpg", 20, 0);
+		generador = new ModeloRR(d3dDevice, d3dContext, "modelos/Generador/Generador.obj", L"modelos/Generador/DieselGenerator_BC.png", L"modelos/Generador/DieselGenerator_R.png", 40, 0);
+		
+		//Mobs
+		caballo = new ModeloRR(d3dDevice, d3dContext, "modelos/Caballo/horse2.obj", L"modelos/Caballo/Horse2.jpg", L"modelos/iglesia/gethsemane_specular.png", 0, 350);
+		toro = new ModeloRR(d3dDevice, d3dContext, "modelos/Toro/Toro.obj", L"modelos/Toro/Bull texture.png", L"modelos/Toro/Bull textureS.png", 60, 350);
+		dog = new ModeloRR(d3dDevice, d3dContext, "modelos/PerroEvil/EvilDog.obj", L"modelos/PerroEvil/dog.png", L"modelos/Generador/DieselGenerator_R.png", 120, 350);
+		
+		//Granja
+		cabaña = new ModeloRR(d3dDevice, d3dContext, "modelos/cabana/cottage_fbx.obj", L"modelos/cabana/cottage_diffuse.png", L"modelos/cabana/cottage_specular.png", -50, 450);
+		granero = new ModeloRR(d3dDevice, d3dContext, "modelos/Granero/Granero.obj", L"modelos/Granero/barn_BaseColor.png", L"modelos/Granero/barn_Roughness.png", 0, 450);
+		corral = new ModeloRR(d3dDevice, d3dContext, "modelos/Corral 3/corral3.obj", L"modelos/Corral 3/corral2.jpg", L"modelos/cabana/cottage_specular.png", -100, 350);
+		cabaña2 = new ModeloRR(d3dDevice, d3dContext, "modelos/cabana/cottage_fbx.obj", L"modelos/cabana/cottage_diffuse.png", L"modelos/cabana/cottage_specular.png", -100, 450);
+		//Pueblo 01
+		molino = new ModeloRR(d3dDevice, d3dContext, "modelos/molino2/molino2.obj", L"modelos/molino2/molino2.jpg", L"modelos/molino2/molino2S.jpg", -300, -350);
+		casa01 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -350, -350);
+		casa02 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", -250, -300);
+	
+
+		//Pueblo 02
+		columpios = new ModeloRR(d3dDevice, d3dContext, "modelos/Columpios/juegosParque.obj", L"modelos/Columpios/1001_albedo.jpg", L"modelos/Columpios/specular.jpg", 200, 400);
+		iglesia = new ModeloRR(d3dDevice, d3dContext, "modelos/iglesia/iglesia.obj", L"modelos/iglesia/gethsemane_diffuse.png", L"modelos/iglesia/gethsemane_specular.png", 150, 380);
+		pozo = new ModeloRR(d3dDevice, d3dContext, "modelos/Pozo/Pozo1.obj", L"modelos/pozo/waterwellcolor.png", L"modelos/cabana/cottage_specular.png", 200, 360);
+
+		//PUEBLO 03
+		casa03 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", 0, 300);
+		casa04 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", -50, 300);
+		casa05 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -50, 100);
+		casa06 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", 0, 100);
+		casa07 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", 50, 300);
+		casa08 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", 50, 100);
+
+
+
+		
 		
 		
 
@@ -275,8 +329,42 @@ public:
 			-11, -78, 4, 5, uv1, uv2, uv3, uv4, frameBillboard);
 
 		//TurnOffAlphaBlending();
-		model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1);
-		cabaña->Draw(camara->vista, camara->proyeccion, terreno->Superficie(0, 0), camara->posCam, 25.0f, 0, 'A', 0.01);
+
+		//GRANJA
+	    //model->Draw(camara, terreno->Superficie(100, 20), 10.0f, 0, 'A', 1);
+		cabaña->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.01);
+		cabaña2->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.01);
+		corral->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.8);
+		granero->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 30);
+
+		//PUEBLO PARTE 1
+		casa01->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+		casa02->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
+		molino->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 1);
+
+		//PUEBLO PARTE 2
+		iglesia->Draw(camara, terreno->Superficie(0, 0), 2.0f, 0, 'A', 0.02);
+		pozo->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 5);	
+		columpios->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 5);
+		
+
+		//MOBS
+		toro->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 1);
+		caballo->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 1);
+		dog->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.05);
+
+		//ITEMS
+		bidon->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 15);
+		bolsa->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.03);
+		generador->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 4);
+		
+		//PUEBLO03
+		casa03->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+		casa04->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
+		casa05->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+		casa06->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
+		casa07->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
+		casa08->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
 		swapChain->Present( 1, 0 );
 	}
 
