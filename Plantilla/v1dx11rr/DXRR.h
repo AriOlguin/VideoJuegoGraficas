@@ -51,12 +51,16 @@ public:
 	ModeloRR* casa, * casa01, * casa02, * molino;
 	//GRANJA
 	ModeloRR* cabaña, * cabaña2, * granero , * corral;
-	//MOBS
+	//MOBS  
 	ModeloRR *toro, * caballo, * dog;
 	//ITEMS
-	ModeloRR * bidon, * bolsa, * generador ;
-
+	ModeloRR * bidon, * bolsa, * generador, *faro ;
+	//PUEBLO 03
 	ModeloRR* casa03, * casa04, * casa05, * casa06,*casa07,*casa08;
+	//MOBS Hostiles
+
+	//OTROS
+	ModeloRR* llanta,*carro,*tractor;
 
 	float izqder;
 	float arriaba;
@@ -96,6 +100,7 @@ public:
 		
 		
 		//Items
+		faro = new ModeloRR(d3dDevice, d3dContext, "modelos/Faro/Faro.obj", L"modelos/Faro/1001_albedo.jpg", L"modelos/Bidon/low_default_Roughness.png", -20, 0);
 		bidon = new ModeloRR(d3dDevice, d3dContext, "modelos/Bidon/Bidon.obj", L"modelos/Bidon/low_default_BaseColor.png", L"modelos/Bidon/low_default_Roughness.png", 0, 0);
 		bolsa = new ModeloRR(d3dDevice, d3dContext, "modelos/Bolsa/Bolsa.obj", L"modelos/Bolsa/PlasticBag_Albedo.jpg", L"modelos/Bolsa/PlasticBag_roughness.jpg", 20, 0);
 		generador = new ModeloRR(d3dDevice, d3dContext, "modelos/Generador/Generador.obj", L"modelos/Generador/DieselGenerator_BC.png", L"modelos/Generador/DieselGenerator_R.png", 40, 0);
@@ -129,11 +134,11 @@ public:
 		casa07 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", 50, 300);
 		casa08 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", 50, 100);
 
+		//OTROS
 
-
-		
-		
-		
+		llanta = new ModeloRR(d3dDevice, d3dContext, "modelos/Llantas/Llanta.obj", L"modelos/Llantas/Tire01_low_1001_BaseColor.png", L"modelos/Generador/DieselGenerator_R.png", 60, 0);
+		carro = new ModeloRR(d3dDevice, d3dContext, "modelos/Carro/Carro.obj", L"modelos/Carro/car_d.png", L"modelos/Generador/DieselGenerator_R.png", 100, 0);
+		tractor = new ModeloRR(d3dDevice, d3dContext, "modelos/Tractor/Tractor.obj", L"modelos/Tractor/foto2.jpg", L"modelos/Generador/DieselGenerator_R.png", 140, 0);
 
 		
 	}
@@ -354,6 +359,7 @@ public:
 		dog->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.05);
 
 		//ITEMS
+		faro->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 1.00);
 		bidon->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 15);
 		bolsa->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.03);
 		generador->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 4);
@@ -365,7 +371,14 @@ public:
 		casa06->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
 		casa07->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
 		casa08->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+		
+		//Llanta
+		llanta->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 50);
+		carro->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 1);
+		tractor->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.005);
 		swapChain->Present( 1, 0 );
+
+		
 	}
 
 	bool isPointInsideSphere(float* point, float* sphere) {

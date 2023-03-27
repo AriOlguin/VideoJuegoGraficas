@@ -132,33 +132,34 @@ C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathmisc.inl
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\ModeloRR.h(297,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\ModeloRR.h(297,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\ModeloRR.h(357,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(308,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(335,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(336,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(337,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(313,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(340,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(341,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(342,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(346,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(354,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(358,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(363,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(365,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(366,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(499,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(500,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(501,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(502,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(510,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(511,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(512,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(513,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(522,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(523,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(524,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(525,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(534,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(347,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(351,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(359,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(364,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(369,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(371,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(372,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(378,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(512,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(513,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(514,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(515,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(523,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(524,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(525,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(526,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(535,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(536,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(537,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(538,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(547,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(548,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(549,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\DXRR.h(550,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\TerrenoSkyBill.cpp(146,15): warning C4244: 'return': conversión de 'WPARAM' a 'int'; posible pérdida de datos
 D:\Clases\2023 01\graficasII\plantiulla\TerrenoSkyBillModGC2\VideoJuegoGraficas\Plantilla\v1dx11rr\TerrenoSkyBill.cpp(213,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
