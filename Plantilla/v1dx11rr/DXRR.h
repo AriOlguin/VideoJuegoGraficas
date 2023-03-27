@@ -43,6 +43,7 @@ public:
 	TerrenoRR *terreno;
 	SkyDome *skydome;
 	BillboardRR *billboard;
+	BillboardRR* arbol;
 	Camara *camara;
 	ModeloRR* model;
 	//PUEBLO 01
@@ -57,6 +58,8 @@ public:
 	ModeloRR * bidon, * bolsa, * generador, *faro ;
 	//PUEBLO 03
 	ModeloRR* casa03, * casa04, * casa05, * casa06,*casa07,*casa08;
+	//Pueblo 04
+	ModeloRR* casa09, * casa10, * casa11, * casa12,*casa13,*casa14;
 	//MOBS Hostiles
 
 	//OTROS
@@ -94,6 +97,7 @@ public:
 		terreno = new TerrenoRR(1024, 1024, d3dDevice, d3dContext);
 		skydome = new SkyDome(32, 32, 100.0f, &d3dDevice, &d3dContext, L"SkyDome.png");
 		billboard = new BillboardRR(L"Assets/Billboards/fuego-anim.png",L"Assets/Billboards/fuego-anim-normal.png", d3dDevice, d3dContext, 5);
+		arbol = new BillboardRR(L"Billboards/Arbol05.png", L"Billboards/Arbol05N.png", d3dDevice, d3dContext, 5);
 		model = new ModeloRR(d3dDevice, d3dContext, "Assets/Cofre/Cofre.obj", L"Assets/Cofre/Cofre-color.png", L"Assets/Cofre/Cofre-spec.png", 0, 0);
 		
 		//casa = new ModeloRR(d3dDevice, d3dContext, "modelos/cabana/cottage_fbx.obj", L"modelos/cabana/cottage_diffuse.png", L"modelos/cabana/cottage_specular.png", 40, 0); 
@@ -129,11 +133,20 @@ public:
 		//PUEBLO 03
 		casa03 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", 0, 300);
 		casa04 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", -50, 300);
-		casa05 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -50, 100);
-		casa06 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", 0, 100);
 		casa07 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", 50, 300);
-		casa08 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", 50, 100);
+		//PUEBLO 04
+		casa05 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -350, 50);
+		casa06 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", -300, 50);
+		casa08 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -250, 50);
 
+
+		casa09 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -350, 0);
+		casa10 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", -300, 0);
+		casa11 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -250, 0);
+
+		casa12 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -350, -50);
+		casa13 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 2/Casa 2.obj", L"modelos/Casa 2/House3_BaseColor.png", L"modelos/cabana/cottage_specular.png", -300, -50);
+		casa14 = new ModeloRR(d3dDevice, d3dContext, "modelos/Casa 1/Casa1.obj", L"modelos/Casa 1/diff.png", L"modelos/cabana/cottage_specular.png", -250, -50);
 		//OTROS
 
 		llanta = new ModeloRR(d3dDevice, d3dContext, "modelos/Llantas/Llanta.obj", L"modelos/Llantas/Tire01_low_1001_BaseColor.png", L"modelos/Generador/DieselGenerator_R.png", 60, 0);
@@ -332,7 +345,8 @@ public:
 		//TurnOnAlphaBlending();
 		billboard->Draw(camara->vista, camara->proyeccion, camara->posCam,
 			-11, -78, 4, 5, uv1, uv2, uv3, uv4, frameBillboard);
-
+		//arbol->Draw(camara->vista, camara->proyeccion, camara->posCam,
+			//0, 0, 4, 5, uv1, uv2, uv3, uv4, frameBillboard);
 		//TurnOffAlphaBlending();
 
 		//GRANJA
@@ -367,11 +381,22 @@ public:
 		//PUEBLO03
 		casa03->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
 		casa04->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
-		casa05->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
-		casa06->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
 		casa07->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
+
+		//PUEBLO 04
+		casa05->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+		casa06->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);	
 		casa08->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
 		
+
+		casa09->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+		//casa10->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
+		//casa11->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+
+		casa12->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+		casa13->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 0.035);
+		casa14->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 3.0);
+
 		//Llanta
 		llanta->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 50);
 		carro->Draw(camara, terreno->Superficie(0, 0), 25.0f, 0, 'A', 1);
